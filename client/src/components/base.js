@@ -8,6 +8,7 @@ import WebcamCapture from "./webcam";
 import Home from "./home";
 import Coba from"./coba";
 import Logout from "./logout";
+import Signupnew from "./signup_new";
 
 
 
@@ -23,7 +24,7 @@ function Navbar_main() {
           </Route>
           <Route path="logout" element={<Logout/>}>
           </Route>
-          <Route path="signup" element={<Signup/>}>
+          <Route path="signup" element={<Signupnew/>}>
           </Route>
           <Route path="facerecog" element={<WebcamCapture/>}>
           </Route>

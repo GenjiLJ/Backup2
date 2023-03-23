@@ -3,10 +3,9 @@ import Auth_service from '../service/auth.service';
 import { useState,useRef } from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import './signup.css'
-import Camera from './webcamsgn';
+// import './signup.css'
 import Webcam from "react-webcam";
-
+import Camera from './webcamsgn';
 import {
   MDBBtn,
   MDBContainer,
@@ -21,13 +20,13 @@ import {
 from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 
-function Signup() {
-
+function Signupcard() {
+  const {url} = Camera()
+  console.log(url)
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [pass1, setPass1] = useState('');
   const [pass2, setPass2] = useState('');
-
   const handleSignup = async () => {
     const res = await Auth_service.signup(email,pass1,pass2);
     console.log(res)
@@ -41,8 +40,10 @@ function Signup() {
   }
 
   return (
-    <MDBContainer fluid className='bg-image'>
-      <Navbar className='bg-signup' variant='dark'>
+    
+    <MDBContainer fluid className='bg-card'>
+    
+      {/* <Navbar className='bg-signup' variant='dark'>
           <MDBContainer>
             <Navbar.Brand href="/home">SPBE</Navbar.Brand>
             <Nav className="me-auto">
@@ -50,11 +51,9 @@ function Signup() {
               <Nav.Link href="/signup">Signup</Nav.Link>
             </Nav>
           </MDBContainer>
-        </Navbar>
-      <MDBRow className='d-flex justify-content-center align-items-center'>
-        <MDBCol col='6'>
+        </Navbar> */}
           {/* <div className="p-5 bg-image" style={{backgroundImage: 'url(https://mdbootstrap.com/img/new/textures/full/171.jpg)', height: '300px'}}></div> */}
-          <MDBCard className='my-5 mx-auto bg-glass' style={{borderRadius:'2rem',maxWidth:'500px'}}>
+          <MDBCard className='my-0 mx-0 bg-glass' style={{borderRadius:'2rem',maxWidth:'500px'}}>
           {/* <MDBCard className='mx-5 mb-5 my-5 p-5 shadow-5' style={{marginTop: '-50px', background: 'hsla(0, 0%, 100%, 0.8)', backdropFilter: 'blur(30px)'}}> */}
             <MDBCardBody className='p-5 w-100 d-flex flex-column text-center'>
 
@@ -77,15 +76,8 @@ function Signup() {
 
             </MDBCardBody>
           </MDBCard>
-
-          <div className='container'>
-            <Camera/>
-          </div>
-        </MDBCol>
-      </MDBRow>
-      
     </MDBContainer>
   );
 }
 
-export default Signup;
+export default Signupcard;

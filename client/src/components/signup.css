@@ -1,14 +1,36 @@
-.bg-image{
+.background{
     background-image: url('./Image/Bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 100vh;
 }
+.bg-card{
+    background-color: transparent;
+}
+.card {
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 15%;
+    margin-top: 50px;
+    padding: 0px;
 
+}
+.camera {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
 
-.bg-signup{
+}
+.hover{
     background-color: #1c1c36;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.bg-login{
+    background-color: #1c1c36;
+    /* background:linear-gradient(to right,#1c1c36,#1c1c36, white);  */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }

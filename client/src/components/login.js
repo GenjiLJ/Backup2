@@ -41,7 +41,7 @@ function Login() {
     // <MDBContainer fluid className="p-3 my-5">
     <>
       
-    <MDBContainer fluid className='bg-image' >
+    <MDBContainer fluid className='bg-image' variant='dark' >
       <Navbar className='bg-login' variant="dark">
           <MDBContainer>
             <Navbar.Brand href="/home">SPBE</Navbar.Brand>
